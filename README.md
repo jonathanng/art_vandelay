@@ -1,2 +1,2 @@
-# vba_import_export
+# Art Vandelay
 A module to import/export VBA code.
