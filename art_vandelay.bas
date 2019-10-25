@@ -92,6 +92,16 @@ Public Sub import()
 
 End Sub
 
+Private Sub ensureDir(path As String)
+
+    Dim fso As New Scripting.FileSystemObject
+
+    If Not fso.FolderExists(path) Then
+        fso.CreateFolder path:=path
+    End If
+
+End Sub
+
 Private Function ext(VBComp As VBComponent) As String
 
     Select Case VBComp.Type
@@ -121,4 +131,3 @@ Private Function subfolder(VBComp As VBComponent) As String
     End Select
 
 End Function
-
